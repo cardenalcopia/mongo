@@ -8,15 +8,23 @@ const UserSchema = new mongoose.Schema({
     },
     password:{
         type:String,
-        validate:[
-            function(password)
-            {
-                return password.lenght>=5;
-            },
-            "Password muy corto"
-        ],
-        select:false
+       
     }
     
 })
 module.exports=mongoose.model("User",UserSchema)
+
+// UserSchema.pre('save', function(next)
+// {
+//     console.log("Middelewarer de entrada");
+//     if(this.login == "rober")
+//     {
+//         console.log("HOLA ROBERTO")
+//         next();
+//     }
+//     else{
+//         console.log("TU QUIEN ERES , TARANTULA?")
+//         next();
+//     }
+
+// })

@@ -5,7 +5,7 @@ let Credentials = require("./dia1Mongo3")
 
 mongoose.connect('mongodb+srv://cardenalcopia:cardenalcopia1.@cluster0.jcewvdc.mongodb.net/test',{useNewUrlParser:false, useUnifiedTopology:false})
 let userDocument = new User({
-    login:"carlos",
+    login:"rober",
     password:"cardenalcopia"
 });
 userDocument.save(checkRespuesta)
@@ -13,7 +13,7 @@ userDocument.save(checkRespuesta)
 let profileDocument = new Profile({
     name:"Roberto",
     surname:"Rodriguez",
-    dateOfBirth:1800,
+    dateOfBirth:1985,
     comments:"el mejor",
     rol:"admin"
 });

@@ -12,3 +12,17 @@ const profileSchema = new mongoose.Schema({
 
 })
 module.exports=mongoose.model("Profile",profileSchema);
+profileSchema.pre('save', function(next)
+{
+    console.log("Middelewarer de entrada");
+    if(this.dateOfBirth == 1985)
+    {
+        console.log("HOLA ROBERTO")
+        next();
+    }
+    else{
+        console.log("TU QUIEN ERES , TARANTULA?")
+        next();
+    }
+
+})
