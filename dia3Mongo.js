@@ -11,6 +11,6 @@ const markSchema = new mongoose.Schema({
    student_last_name:String,
    group_name:String,
    subject_name:String,
-   tachers:[teacherSchema]
+   teachers:[teacherSchema]
 })
 module.exports= mongoose.model("Mark",markSchema)
