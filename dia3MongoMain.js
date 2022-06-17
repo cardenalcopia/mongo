@@ -133,22 +133,12 @@ function checkRespuesta(err,res)
 //             {
 //                 console.log(error);
 //             });
-// // Mark
-// .aggregate([{$unwind:"$teachers"},
-//             {$match:{"teachers.teacher_first_name":"Jose"}},
-//             {$project:{"student_first_name":1}}
-//             ])
-//             .then((result) =>
-//             {
-//                 console.log(result );
-//             })
-//             .catch((error) =>
-//             {
-//                 console.log(error);
-//             });
-Mark
-.aggregate([{$match:{"date":{"$gt":new Date("2022,01,01")}}},
-            {$group :{"_id":"$student_first_name", "Nota media":{"$avg":"$mark"}}}])
+ Mark
+.aggregate([{$unwind:"$teachers"},
+            {$match:{"teachers.teacher_first_name":"Jose"}},
+            // {$project:{"student_first_name":1}},
+            {$group:{"_id":"$student_first_name","total":{"$sum":1}}}
+            ])
             .then((result) =>
             {
                 console.log(result );
@@ -157,3 +147,14 @@ Mark
             {
                 console.log(error);
             });
+// Mark
+// .aggregate([{$match:{"date":{"$gt":new Date("2022,01,01")}}},
+//             {$group :{"_id":"$student_first_name", "Nota media":{"$avg":"$mark"}}}])
+//             .then((result) =>
+//             {
+//                 console.log(result );
+//             })
+//             .catch((error) =>
+//             {
+//                 console.log(error);
+//             });
