@@ -9,4 +9,4 @@ const FotoSchema = new Schema(
 
     }
 )
-module.exports= model("Foto",FotoSchema,"foto")
+module.exports= model("Foto",FotoSchema,"Foto")
