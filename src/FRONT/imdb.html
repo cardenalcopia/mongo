@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="imdb.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="main">
+        <div class="encabezado">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black ;">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Profesionales <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Peliculas</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </nav>
+        </div>
+        <div class="cuerpo">
+            <div class="izquierda">
+                <form>
+                        <div class="form-group">
+                        <label for="formGroupExampleInput">Nombre</label>
+                        <input type="text" class="form-control" id="name" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                        <label for="formGroupExampleInput2">Edad</label>
+                        <input type="text" class="form-control" id="age" placeholder="Edad">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Nacionalidad</label>
+                            <input type="text" class="form-control" id="nationality" placeholder="Nacionalidad">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Profesión</label>
+                            <input type="text" class="form-control" id="profession" placeholder="Profesion">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Id</label>
+                            <input type="text" class="form-control" id="_id" placeholder="Id">
+                        </div>
+                </form>
+                    <button type="button" class="btn btn-primary" onclick="getStudent()">Mostrar</button>
+                    <button type="button" class="btn btn-primary" onclick="postProf()">Añadir</button>
+                    <button type="button" class="btn btn-primary" onclick="putStudent()">Actualizar</button>
+                    <button type="button" class="btn btn-primary" onclick="delStudent()">Borrar</button>
+            </div>
+            <div class="derecha">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Nombre</label>
+                    <input type="text" class="form-control" id="nameback" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                    <label for="formGroupExampleInput2">Edad</label>
+                    <input type="text" class="form-control" id="ageback" placeholder="Edad">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Nacionalidad</label>
+                        <input type="text" class="form-control" id="nationalityback" placeholder="Nacionalidad">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Profesión</label>
+                        <input type="text" class="form-control" id="professionback" placeholder="Profesion">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Id</label>
+                        <input type="text" class="form-control" id="_idback" placeholder="Id">
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script src="imdb.js"></script>
+</html>

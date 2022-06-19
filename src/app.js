@@ -1,6 +1,6 @@
 const express= require("express")
 const cors = require("cors")
-const imdbrouters = require("./model/imdb")
+const imdbrouters = require("./routers/imdb.routers")
 const errorHandling= require ("./error/errorHandling")
 const app = express();
 
